@@ -1,9 +1,9 @@
 {
-  "name": "bracket-matcher",
-  "version": "0.91.1",
+  "name": "bracket-matcher-custom",
+  "version": "1.00.0",
   "main": "./lib/main",
   "description": "Highlight the matching bracket for the `(){}[]` character under the cursor. Move the cursor to the matching bracket with `ctrl-m`.",
-  "repository": "https://github.com/atom/bracket-matcher",
+  "repository": "https://github.com/Guilucand/bracket-matcher",
   "license": "MIT",
   "engines": {
     "atom": "*"
@@ -15,6 +15,16 @@
   "configSchema": {
     "autocompleteCharacters": {
       "description": "Autocompleted characters treated as matching pairs, such as `()`, and `{}`.",
+      "type": "array",
+      "default": [
+        "{}",
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "automatchCharacters": {
+      "description": "Automatch characters treated as matching pairs, such as `()`, and `{}`.",
       "type": "array",
       "default": [
         "()",
